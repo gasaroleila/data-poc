@@ -203,6 +203,16 @@ cython_debug/
 # Temporary file for partial code execution
 tempCodeRunnerFile.py
 
+# Project data (generated, not tracked)
+data/raw/*.json
+data/delta/bronze/*
+data/delta/silver/*
+data/delta/gold/*
+!data/**/.gitkeep
+
+# Audit logs
+logs/*.jsonl
+
 # Ruff stuff:
 .ruff_cache/
 

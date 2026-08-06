@@ -1,0 +1,13 @@
+services:
+  spark-jupyter:
+    build:
+      context: .
+      dockerfile: dockerfiles/spark-jupyter.Dockerfile
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./data:/workspace/data
+      - ./notebooks:/workspace/notebooks
+      - ./src:/workspace/src
+    environment:
+      - PYSPARK_PYTHON=python3
